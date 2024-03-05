@@ -265,11 +265,43 @@ padding: 40px;
 
 
     </div>
+<<<<<<< HEAD
 </div>
 
     <script>
            
    const appliances = [
+=======
+
+
+
+    <div class="myproducts" id="sectionproducts">
+      <div class="productheader">
+          <div class="productcategorytitle">
+            <b> All Products two <span id="numofitemstwo"></span></b> 
+          </div>
+
+          <div class="searchbox">
+<input type="search" placeholder="Search For Product" id="mysearch" value=""  oninput="productstwo()">
+          </div>
+      </div>
+
+
+<div class="allproducts" id="newlist">
+
+
+
+
+</div>
+
+
+  </div>
+</div>
+
+    <script>
+
+  const appliances = [
+>>>>>>> a36c5e45acf36505f1f1c4a8514b844f6796e51f
   {
     imageUrl: `https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/17/397664/1.jpg?9493`,
     name: `XIAOMI Redmi Note 12 6.67'' 8GB 128GB ROM Android 13 - Onyx Gray`,
@@ -1491,6 +1523,83 @@ if (searchTerm) {
   Products.innerHTML= "<p>Product not available</p>";
 }
 }
+<<<<<<< HEAD
+=======
+=======
+function getnum(){
+ 
+  const num = appliances.length
+document.getElementById('numofitems').innerHTML = num
+
+} getnum()
+
+function search(){
+  
+  const searchTerm = document.getElementById("search").value;
+     const found = appliances.find(products => products.name === searchTerm);
+
+     const displayElement = document.getElementById("list");
+     if (found) {
+         displayElement.innerHTML = ` <img src="${found.imageUrl}" alt="">
+<h3> ${found.name}  </h3>
+<h3> ${found.price}  </h3>
+                                    `;
+                                      
+     } else {
+         displayElement.innerHTML = "<p>Product not available</p>";
+     }
+}
+
+function products(){
+            
+         
+
+const move = appliances.map(function(product){
+    return   `<div class="product"> 
+      <img src="${product.imageUrl}  " alt="">
+<h3>paroductname: ${product.name}  </h3>
+<h3>product price:  ${product.price}  </h3>
+
+
+ </div>` 
+})
+
+  const mlist = move.join("");
+
+  const mylist = document.getElementById('list')
+
+  mylist.innerHTML = mlist;
+ }
+
+ 
+
+ function productstwo() {
+  const searchInput = document.getElementById('mysearch').value
+
+  let myfiltereddata = appliances.filter(
+    appliance => appliance.name.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase())
+  )
+
+  let mydata = ''
+  const mylist = document.getElementById('newlist')
+  myfiltereddata.forEach(product => {
+    mydata +=  `<div class="product"> 
+      <img src="${product.imageUrl}  " alt="">
+<h3>${product.name}  </h3>
+<h3> ${product.price}  </h3>
+
+
+ </div>`
+  }  )
+
+  newlist.innerHTML = mydata
+ }
+ productstwo()
+
+ 
+
+>>>>>>> 2717b2cd735b5e4f82e7650485ec976e4633f07e
+>>>>>>> a36c5e45acf36505f1f1c4a8514b844f6796e51f
     </script>
 </body>
 </html>

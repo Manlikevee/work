@@ -7,14 +7,20 @@
 </head>
 <body>
     <style>
+
+        body , *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
         @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
         .container{
-            min-height: 100vh;
+       
         width: 100%;
         display: flex;
         align-items: center ;
         justify-content: center;
-        background-color: rgb(15, 38, 105);
+
         flex-direction: column;
         font-family: Mulish;
         }
@@ -56,17 +62,33 @@ button{
     background-color: #702fa9;
 }
 .box{
-    padding: 7px;
-    background-color: white;
-    border: 1px solid #ccc;
-    width: 400px;
-    max-height: 20vh;
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+  
+
+
+border: 1px solid #ccc;
+        padding: 30px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
         }
- 
+
+        h3{
+            color: rgb(149, 149, 38);
+        }
+        .fr{
+            width: 100%;
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+background-color: white;
+border: 1px solid #000;
+padding: 20px;
+
+    }
 
     </style>
 
@@ -97,21 +119,8 @@ button{
         </div>
 
         <h2>ALL GADGETS</h2>
-        <div class="box" id="">
-            <div class="name">
-                NAME
-            </div>
-            <input type="text" placeholder="" id="na">
-            <div class="price">
-                PRICE
-            </div>
-            <input type="text" placeholder="" id="pr">
-
-            <div class="q">
-                QUANTITY
-              
-            </div>
-            <input type="text" placeholder="" id="qt">
+        <div class="fr" id="bx">
+           
         </div>
        
     </div>
@@ -140,7 +149,20 @@ store()
     }
 
     function store(){
-       
+        const displaydiv =   document.getElementById('bx')
+       const move = inventory.map(function(stored){
+    return   `<div class="box"> 
+        <h3> Product name: ${stored.name}  </h3>
+<h3> Product Price ${stored.price}  </h3>   
+<h3> Product Quantity ${stored.qty}  </h3>    
+ 
+        </div>` 
+    })
+
+        const mlist = move.join("");
+
+
+        displaydiv.innerHTML = mlist;
 
     }
     </script>
