@@ -213,7 +213,6 @@ padding: 40px;
     </style>
     
 <header>
- 
     <div class="logo">
         <img src="https://deskilz.com/wp-content/uploads/2023/03/lolo-v2-v3-120x120.png" alt="">
     </div>
@@ -244,38 +243,22 @@ padding: 40px;
     <div class="myproducts" id="sectionproducts">
         <div class="productheader">
             <div class="productcategorytitle">
-<<<<<<< HEAD
               <b> All Products <span id="length"> </span></b> 
             </div>
 
             <div class="searchbox" onclick="emi()">
 <input type="search" placeholder="Search For Product" id="search" oninput="cat">
-=======
-              <b> All Products <span id="numofitems"></span></b> 
-            </div>
-
-            <div class="searchbox">
-<input type="search" placeholder="Search For Product" id="search" value="gdgdgdgdgdg"  oninput="search()">
->>>>>>> 2717b2cd735b5e4f82e7650485ec976e4633f07e
             </div>
         </div>
 
 
-<<<<<<< HEAD
 <div class="allproducts" id="products">
 
-=======
-<div class="allproducts" id="list">
-<button onclick="products()">All Products</button>
->>>>>>> 2717b2cd735b5e4f82e7650485ec976e4633f07e
 <!-- products would go here -->
 
 
 <!-- html structure 4 product -->
-<<<<<<< HEAD
 
-=======
->>>>>>> 2717b2cd735b5e4f82e7650485ec976e4633f07e
 
 
 </div>
@@ -283,34 +266,15 @@ padding: 40px;
 
     </div>
 
-
-
-    <div class="myproducts" id="sectionproducts">
-      <div class="productheader">
-          <div class="productcategorytitle">
-            <b> All Products two <span id="numofitemstwo"></span></b> 
-          </div>
-
-          <div class="searchbox">
-<input type="search" placeholder="Search For Product" id="mysearch" value=""  oninput="productstwo()">
-          </div>
-      </div>
-
-
-<div class="allproducts" id="newlist">
-
-
-
-
 </div>
 
-
-  </div>
-</div>
+    <script>
+   
 
     <script>
 
   const appliances = [
+
   {
     imageUrl: `https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/17/397664/1.jpg?9493`,
     name: `XIAOMI Redmi Note 12 6.67'' 8GB 128GB ROM Android 13 - Onyx Gray`,
@@ -1494,11 +1458,36 @@ padding: 40px;
       name: `Hp Stream 11 Pro- Intel Celeron - 4GB RAM - 64GB SSD Windows 10 Pro+ Mouse & USB LIGHT FOR Keyboard`,
       price: '₦ 272,800  '
     },
+
 
 
     
 
 ];
+
+
+function emi(){
+  const march = appliances.map(function(google){
+return `<div class="product">
+  <img src=" ${google.imageUrl}" alt="">
+  ${google.name}
+  ${google.price}
+  </div>`
+  })
+
+const issl = march.join("")
+const productdiv =document.getElementById('products')
+productdiv.innerHTML = issl ;
+console.log(issl)
+
+} emi()
+
+function cow(){
+  const num=appliances.length
+document.getElementById('length').innerHTML=num
+}
+
+
 
 function getnum(){
  
@@ -1545,6 +1534,35 @@ const move = appliances.map(function(product){
   mylist.innerHTML = mlist;
  }
 
+ 
+
+ function productstwo() {
+  const searchInput = document.getElementById('mysearch').value
+
+  let myfiltereddata = appliances.filter(
+    appliance => appliance.name.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase())
+  )
+
+  let mydata = ''
+  const mylist = document.getElementById('newlist')
+  myfiltereddata.forEach(product => {
+    mydata +=  `<div class="product"> 
+      <img src="${product.imageUrl}  " alt="">
+<h3>${product.name}  </h3>
+<h3> ${product.price}  </h3>
+
+
+ </div>`
+  }  )
+
+  newlist.innerHTML = mydata
+ }
+ productstwo()
+
+ 
+
+>>>>>>> a36c5e45acf36505f1f1c4a8514b844f6796e51f
+>>>>>>> 02772bf90f672c674f000dfae7f5cc1d6b79f40b
     </script>
 </body>
 </html>
