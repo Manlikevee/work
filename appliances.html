@@ -244,21 +244,38 @@ padding: 40px;
     <div class="myproducts" id="sectionproducts">
         <div class="productheader">
             <div class="productcategorytitle">
+<<<<<<< HEAD
+              <b> All Products <span id="length"> </span></b> 
+            </div>
+
+            <div class="searchbox" onclick="emi()">
+<input type="search" placeholder="Search For Product" id="search" oninput="cat">
+=======
               <b> All Products <span id="numofitems"></span></b> 
             </div>
 
             <div class="searchbox">
 <input type="search" placeholder="Search For Product" id="search" value="gdgdgdgdgdg"  oninput="search()">
+>>>>>>> 2717b2cd735b5e4f82e7650485ec976e4633f07e
             </div>
         </div>
 
 
+<<<<<<< HEAD
+<div class="allproducts" id="products">
+
+=======
 <div class="allproducts" id="list">
 <button onclick="products()">All Products</button>
+>>>>>>> 2717b2cd735b5e4f82e7650485ec976e4633f07e
 <!-- products would go here -->
 
 
 <!-- html structure 4 product -->
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2717b2cd735b5e4f82e7650485ec976e4633f07e
 
 
 </div>
@@ -1478,10 +1495,49 @@ padding: 40px;
       price: '₦ 272,800  '
     },
 
+<<<<<<< HEAD
+=======
     
+>>>>>>> 2717b2cd735b5e4f82e7650485ec976e4633f07e
 ];
 
+function emi(){
+  const march = appliances.map(function(google){
+return `<div class="product">
+  <img src=" ${google.imageUrl}" alt="">
+  ${google.name}
+  ${google.price}
+  </div>`
+  })
 
+<<<<<<< HEAD
+const issl = march.join("")
+const productdiv =document.getElementById('products')
+productdiv.innerHTML = issl ;
+console.log(issl)
+
+} emi()
+
+function cow(){
+  const num=appliances.length
+document.getElementById('length').innerHTML=num
+}
+
+function cat(){
+const search=document.getElementById('search').value;
+const searchTerm =appliances.find(products => products.name === search);
+
+const Products=document.getElementById('products');
+if (searchTerm) {
+ Products.innerHTML = `<img src=" ${searchTerm.imageUrl}" alt="">
+  ${searchTerm.name}
+  ${searchTerm.price}
+  `;
+} else {
+  Products.innerHTML= "<p>Product not available</p>";
+}
+}
+=======
 function getnum(){
  
   const num = appliances.length
@@ -1554,6 +1610,7 @@ const move = appliances.map(function(product){
 
  
 
+>>>>>>> 2717b2cd735b5e4f82e7650485ec976e4633f07e
     </script>
 </body>
 </html>
