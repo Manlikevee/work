@@ -243,69 +243,22 @@ padding: 40px;
     <div class="myproducts" id="sectionproducts">
         <div class="productheader">
             <div class="productcategorytitle">
-              <b> All Products <span> (4)</span></b> 
+              <b> All Products <span id="length"> </span></b> 
             </div>
 
-            <div class="searchbox">
-<input type="search" placeholder="Search For Product">
+            <div class="searchbox" onclick="emi()">
+<input type="search" placeholder="Search For Product" id="search" oninput="cat">
             </div>
         </div>
 
 
-<div class="allproducts">
+<div class="allproducts" id="products">
 
 <!-- products would go here -->
 
 
 <!-- html structure 4 product -->
-<div class="product">
-    <div class="productimg">
-        <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/17/397664/1.jpg?9493" alt="">
-    </div>
-    <div class="productname">
-        `XIAOMI Redmi Note 12 6.67'' 8GB 128GB ROM Android 13 - Onyx Gray
-    </div>
-    <div class="productprice">
-        ₦ 150,000
-    </div>
-    <div class="addtocart">Add To Cart</div>
-</div>
-<div class="product">
-    <div class="productimg">
-        <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/17/397664/1.jpg?9493" alt="">
-    </div>
-    <div class="productname">
-        `XIAOMI Redmi Note 12 6.67'' 8GB 128GB ROM Android 13 - Onyx Gray
-    </div>
-    <div class="productprice">
-        ₦ 150,000
-    </div>
-    <div class="addtocart">Add To Cart</div>
-</div>
-<div class="product">
-    <div class="productimg">
-        <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/17/397664/1.jpg?9493" alt="">
-    </div>
-    <div class="productname">
-        `XIAOMI Redmi Note 12 6.67'' 8GB 128GB ROM Android 13 - Onyx Gray
-    </div>
-    <div class="productprice">
-        ₦ 150,000
-    </div>
-    <div class="addtocart">Add To Cart</div>
-</div>
-<div class="product">
-    <div class="productimg">
-        <img src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/17/397664/1.jpg?9493" alt="">
-    </div>
-    <div class="productname">
-        `XIAOMI Redmi Note 12 6.67'' 8GB 128GB ROM Android 13 - Onyx Gray
-    </div>
-    <div class="productprice">
-        ₦ 150,000
-    </div>
-    <div class="addtocart">Add To Cart</div>
-</div>
+
 
 
 </div>
@@ -1501,17 +1454,43 @@ padding: 40px;
       price: '₦ 272,800  '
     },
 
-    
-
-
-
-
-
-
-
 ];
 
+function emi(){
+  const march = appliances.map(function(google){
+return `<div class="product">
+  <img src=" ${google.imageUrl}" alt="">
+  ${google.name}
+  ${google.price}
+  </div>`
+  })
 
+const issl = march.join("")
+const productdiv =document.getElementById('products')
+productdiv.innerHTML = issl ;
+console.log(issl)
+
+} emi()
+
+function cow(){
+  const num=appliances.length
+document.getElementById('length').innerHTML=num
+}
+
+function cat(){
+const search=document.getElementById('search').value;
+const searchTerm =appliances.find(products => products.name === search);
+
+const Products=document.getElementById('products');
+if (searchTerm) {
+ Products.innerHTML = `<img src=" ${searchTerm.imageUrl}" alt="">
+  ${searchTerm.name}
+  ${searchTerm.price}
+  `;
+} else {
+  Products.innerHTML= "<p>Product not available</p>";
+}
+}
     </script>
 </body>
 </html>
