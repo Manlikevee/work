@@ -213,7 +213,6 @@ padding: 40px;
     </style>
     
 <header>
- 
     <div class="logo">
         <img src="https://deskilz.com/wp-content/uploads/2023/03/lolo-v2-v3-120x120.png" alt="">
     </div>
@@ -244,73 +243,33 @@ padding: 40px;
     <div class="myproducts" id="sectionproducts">
         <div class="productheader">
             <div class="productcategorytitle">
-<<<<<<< HEAD
               <b> All Products <span id="length"> </span></b> 
             </div>
 
             <div class="searchbox" onclick="emi()">
 <input type="search" placeholder="Search For Product" id="search" oninput="cat">
-=======
-              <b> All Products <span id="numofitems"></span></b> 
-            </div>
-
-            <div class="searchbox">
-<input type="search" placeholder="Search For Product" id="search" value="gdgdgdgdgdg"  oninput="search()">
->>>>>>> 2717b2cd735b5e4f82e7650485ec976e4633f07e
             </div>
         </div>
 
 
-<<<<<<< HEAD
 <div class="allproducts" id="products">
 
-=======
-<div class="allproducts" id="list">
-<button onclick="products()">All Products</button>
->>>>>>> 2717b2cd735b5e4f82e7650485ec976e4633f07e
 <!-- products would go here -->
 
 
 <!-- html structure 4 product -->
-<<<<<<< HEAD
 
-=======
->>>>>>> 2717b2cd735b5e4f82e7650485ec976e4633f07e
 
 
 </div>
 
 
     </div>
-
-
-
-    <div class="myproducts" id="sectionproducts">
-      <div class="productheader">
-          <div class="productcategorytitle">
-            <b> All Products two <span id="numofitemstwo"></span></b> 
-          </div>
-
-          <div class="searchbox">
-<input type="search" placeholder="Search For Product" id="search" value="gdgdgdgdgdg"  oninput="mysearch()">
-          </div>
-      </div>
-
-
-<div class="allproducts" id="list">
-
-
-
-
-</div>
-
-
-  </div>
 </div>
 
     <script>
-      
-  const appliances = [
+           
+   const appliances = [
   {
     imageUrl: `https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/17/397664/1.jpg?9493`,
     name: `XIAOMI Redmi Note 12 6.67'' 8GB 128GB ROM Android 13 - Onyx Gray`,
@@ -1495,10 +1454,6 @@ padding: 40px;
       price: '₦ 272,800  '
     },
 
-<<<<<<< HEAD
-=======
-    
->>>>>>> 2717b2cd735b5e4f82e7650485ec976e4633f07e
 ];
 
 function emi(){
@@ -1510,7 +1465,6 @@ return `<div class="product">
   </div>`
   })
 
-<<<<<<< HEAD
 const issl = march.join("")
 const productdiv =document.getElementById('products')
 productdiv.innerHTML = issl ;
@@ -1537,60 +1491,6 @@ if (searchTerm) {
   Products.innerHTML= "<p>Product not available</p>";
 }
 }
-=======
-function getnum(){
- 
-  const num = appliances.length
-document.getElementById('numofitems').innerHTML = num
-
-} getnum()
-
-function search(){
-  
-  const searchTerm = document.getElementById("search").value;
-     const found = appliances.find(products => products.name === searchTerm);
-
-     const displayElement = document.getElementById("list");
-     if (found) {
-         displayElement.innerHTML = ` <img src="${found.imageUrl}" alt="">
-<h3> ${found.name}  </h3>
-<h3> ${found.price}  </h3>
-                                    `;
-                                      
-     } else {
-         displayElement.innerHTML = "<p>Product not available</p>";
-     }
-}
-
-function products(){
-            
-         
-
-const move = appliances.map(function(product){
-    return   `<div class="product"> 
-      <img src="${product.imageUrl}  " alt="">
-<h3>paroductname: ${product.name}  </h3>
-<h3>product price:  ${product.price}  </h3>
-
-
- </div>` 
-})
-
-  const mlist = move.join("");
-
-  const mylist = document.getElementById('list')
-
-  mylist.innerHTML = mlist;
- }
-
- 
-
- function productstwo() {
-  
- }
-      
-
->>>>>>> 2717b2cd735b5e4f82e7650485ec976e4633f07e
     </script>
 </body>
 </html>
