@@ -271,7 +271,6 @@ padding: 40px;
     <script>
    
 
-    <script>
 
   const appliances = [
 
@@ -1466,26 +1465,7 @@ padding: 40px;
 ];
 
 
-function emi(){
-  const march = appliances.map(function(google){
-return `<div class="product">
-  <img src=" ${google.imageUrl}" alt="">
-  ${google.name}
-  ${google.price}
-  </div>`
-  })
 
-const issl = march.join("")
-const productdiv =document.getElementById('products')
-productdiv.innerHTML = issl ;
-console.log(issl)
-
-} emi()
-
-function cow(){
-  const num=appliances.length
-document.getElementById('length').innerHTML=num
-}
 
 
 
@@ -1558,11 +1538,6 @@ const move = appliances.map(function(product){
   newlist.innerHTML = mydata
  }
  productstwo()
-
- 
-
->>>>>>> a36c5e45acf36505f1f1c4a8514b844f6796e51f
->>>>>>> 02772bf90f672c674f000dfae7f5cc1d6b79f40b
     </script>
 </body>
 </html>
