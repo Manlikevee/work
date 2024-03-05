@@ -275,12 +275,12 @@ padding: 40px;
           </div>
 
           <div class="searchbox">
-<input type="search" placeholder="Search For Product" id="search" value="gdgdgdgdgdg"  oninput="mysearch()">
+<input type="search" placeholder="Search For Product" id="mysearch" value=""  oninput="productstwo()">
           </div>
       </div>
 
 
-<div class="allproducts" id="list">
+<div class="allproducts" id="newlist">
 
 
 
@@ -292,7 +292,7 @@ padding: 40px;
 </div>
 
     <script>
-      
+
   const appliances = [
   {
     imageUrl: `https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/17/397664/1.jpg?9493`,
@@ -1530,9 +1530,29 @@ const move = appliances.map(function(product){
  
 
  function productstwo() {
-  
+  const searchInput = document.getElementById('mysearch').value
+
+  let myfiltereddata = appliances.filter(
+    appliance => appliance.name.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase())
+  )
+
+  let mydata = ''
+  const mylist = document.getElementById('newlist')
+  myfiltereddata.forEach(product => {
+    mydata +=  `<div class="product"> 
+      <img src="${product.imageUrl}  " alt="">
+<h3>${product.name}  </h3>
+<h3> ${product.price}  </h3>
+
+
+ </div>`
+  }  )
+
+  newlist.innerHTML = mydata
  }
-      
+ productstwo()
+
+ 
 
     </script>
 </body>
