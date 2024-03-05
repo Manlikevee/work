@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+        .container{
+            min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center ;
+        justify-content: center;
+        background-color: rgb(15, 38, 105);
+        flex-direction: column;
+        font-family: Mulish;
+        }
+
+        .form{
+        padding: 40px;
+        width: 500px;
+        background-color: white;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .inputblock{
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input{
+    padding: 10px;
+    border-radius: 4px;
+    color: black;
+    border: 1px solid #1e1e1e;
+    font-family: 'poppins';
+}
+button{
+    margin-top: 8px;
+    padding: 13px;
+    border-radius: 4px;
+    width: 100%;
+    color: white;
+    border: 1px solid #1e1e1e;
+    font-family: 'poppins';
+    background-color: #702fa9;
+}
+.box{
+    padding: 7px;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 400px;
+    max-height: 20vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+        }
+ 
+
+    </style>
+
+    <div class="container">
+        <h1>GADGET STORE</h1>
+        <div class="form">
+           <div class="inputblock">
+                <div class="inputs">
+                    <label for=""> PRODUCT NAME</label>
+                    <input type="text" placeholder="" id="name">
+                </div>
+                <div class="inputs">
+                    <label for="">PRODUCT PRICE</label>
+                    <input type="text" placeholder="" id="price">
+                </div>
+                <div class="inputs">
+                    <label for="">PRODUCT QTY.</label>
+                    <input type="text" placeholder="" id="qty">
+                </div>
+                <div class="inputs">
+                    <label for="">PRODUCT DESC.</label>
+                    <input type="text" placeholder="" id="desc">
+                </div>
+            
+                <button onclick="gadget()">ADD</button>
+            </div>
+            
+        </div>
+
+        <h2>ALL GADGETS</h2>
+        <div class="box" id="">
+            <div class="name">
+                NAME
+            </div>
+            <input type="text" placeholder="" id="na">
+            <div class="price">
+                PRICE
+            </div>
+            <input type="text" placeholder="" id="pr">
+
+            <div class="q">
+                QUANTITY
+              
+            </div>
+            <input type="text" placeholder="" id="qt">
+        </div>
+       
+    </div>
+
+    <script>
+
+        const inventory = [
+
+        ];
+    function gadget(){
+        const name = document.getElementById('name').value 
+const price = document.getElementById('price').value 
+const qty = document.getElementById('qty').value 
+const desc = document.getElementById('desc').value 
+        
+const gadget = {
+    name : name,
+    price : price,
+    qty : qty,
+  
+}
+
+
+inventory.push(gadget)
+store()
+    }
+
+    function store(){
+       
+
+    }
+    </script>
+</body>
+</html>
