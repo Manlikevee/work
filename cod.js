@@ -13,3 +13,4 @@ function mysearch() {
     demoDiv.innerHTML = mydiv
 
 } mysearch()
+
