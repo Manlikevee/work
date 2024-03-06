@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .char {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1B2B41B8;
+    padding-bottom: 10px;
+}
+
+.display {
+    display: flex;
+}
+
+.boxing {
+    outline: none;
+    border: none;
+    background: linear-gradient(180deg, #F6F6F6 0%, rgba(235, 235, 235, 0.48) 100%);
+    width: 45vh;
+    padding: 14px;
+    border-radius: 10px;
+    padding-inline: 20px;
+    color: #4A4A4AF0;
+    font-family: Poppins;
+}
+
+.display img {
+    width: 2%;
+    height: 3%;
+    margin-left: -48px;
+    margin-top: 6px;
+}
+
+input{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1B2B41B8;
+    padding-bottom: 10px;
+    background: linear-gradient(180deg, #F6F6F6 0%, rgba(235, 235, 235, 0.48) 100%);
+    outline: none;
+    border: none;
+    width: 45vh;
+    padding: 14px;
+    border-radius: 10px;
+    padding-inline: 20px;
+    color: #4A4A4AF0;
+}
+</style>
+<body>
+    <div class="textfield">
+        <div class="char">
+         Date of Birth
+        </div>
+        <input type="date" name="" id="">
+       <div class="display">
+        <input type="text" class="boxing" placeholder="MM/DD/YY" id="Dob">   <img src="Calendar (1).png" alt="" onclick="date()">
+       </div>
+        
+    </div>
+
+
+    <script>
+        function date(){
+
+            const d = new Date();
+            d.toDateString();
+            document.getElementById("Dob").value = d;
+        }
+    </script>
+</body>
+</html>

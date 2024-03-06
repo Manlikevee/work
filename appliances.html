@@ -1486,12 +1486,13 @@ function search(){
          displayElement.innerHTML = ` <img src="${found.imageUrl}" alt="">
 <h3> ${found.name}  </h3>
 <h3> ${found.price}  </h3>
-                                    `;
-                                      
+       `;
+                                    
      } else {
          displayElement.innerHTML = "<p>Product not available</p>";
      }
 }
+
 
 function products(){
             
@@ -1527,7 +1528,7 @@ const move = appliances.map(function(product){
   const mylist = document.getElementById('newlist')
   myfiltereddata.forEach(product => {
     mydata +=  `<div class="product"> 
-      <img src="${product.imageUrl}  " alt="">
+      <img src="${product.imageUrl} " alt="">
 <h3>${product.name}  </h3>
 <h3> ${product.price}  </h3>
 
